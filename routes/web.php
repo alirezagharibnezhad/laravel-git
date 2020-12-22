@@ -385,3 +385,18 @@ Route::get('session',function (\Illuminate\Http\Request $request){
 
 
 ///یک تغییر کوچک
+
+Route::prefix('fa')->group(function (){
+
+    \Illuminate\Support\Facades\App::setLocale('fa');
+//    $local = \Illuminate\Support\Facades\App::getLocale();
+//    dd($local);
+//
+//    if (\Illuminate\Support\Facades\App::isLocale('fa')){
+//        dd('زبان فارسی شد');
+//    }
+    Route::get('massage',function (){
+        return view('massage');
+    });
+});
+
